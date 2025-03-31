@@ -1,0 +1,37 @@
+<% if (mensaje) { %>
+  <div class="alert alert-info"><%= mensaje %></div>
+<% } %>
+
+<a href="/libros/nuevo" class="btn btn-primary mb-3">➕ Nuevo Libro</a>
+
+<table class="table table-striped">
+  <thead class="table-dark">
+    <tr>
+      <th>No.</th>
+      <th>Titulo</th>
+      <th>Autor</th>
+      <th>Año</th>
+      <th>Genero</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% libros.forEach((libro, index) => { %>
+      <tr>
+        <th scope="row"><%= index + 1 %></th>
+        <td>
+          <a href="/libros/<%= libro.id %>" class="text-decoration-none"><%= libro.titulo %></a>
+        </td>
+        <td><%= libro.autor %></td>
+        <td><%= libro.anio_publicacion %></td>
+        <td><%= libro.genero %></td>
+        <td>
+          <a href="/libros/<%= libro.id %>/editar" class="btn btn-warning btn-sm">Editar</a>
+          <form action="/libros/<%= libro.id %>/eliminar?_method=DELETE" method="POST" style="display:inline;">
+            <button class="btn btn-danger btn-sm">Eliminar</button>
+          </form>
+        </td>
+      </tr>
+    <% }) %>
+  </tbody>
+</table>

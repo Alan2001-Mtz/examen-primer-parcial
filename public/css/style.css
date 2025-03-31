@@ -1,0 +1,63 @@
+/* Estilo general */
+body {
+  background-color: #f9f9f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* Contenedor principal */
+main.container {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 3rem;
+  padding: 1rem 0;
+  border-top: 1px solid #ccc;
+}
+
+/* Estilo tabla */
+table th, table td {
+  vertical-align: middle;
+}
+
+thead.table-dark th {
+  background-color: #343a40;
+  color: white;
+}
+
+/* Enlaces tipo ícono */
+a.icon-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .375rem;
+  text-decoration: underline;
+  text-underline-offset: .25em;
+  color: #0d6efd;
+  transition: color 0.3s ease;
+}
+
+a.icon-link svg {
+  width: 1em;
+  height: 1em;
+  transition: transform .2s ease-in-out;
+}
+
+a.icon-link-hover:hover svg {
+  transform: translate3d(.25em, 0, 0);
+}
+
+a.icon-link-hover:hover {
+  color: #0b5ed7;
+}
+
+/* Botones */
+.btn {
+  font-weight: 500;
+}
